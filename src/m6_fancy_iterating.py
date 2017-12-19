@@ -13,8 +13,8 @@ is different from:
   -- LOOKING only at items AT even-numbered indices.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ryan Taylor.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -22,7 +22,7 @@ import rosegraphics as rg
 def main():
     """ Calls the   TEST   functions in this module. """
     # ------------------------------------------------------------------
-    # TODO: 2.  EXAMINE the  4  sequences immediately below
+    # DONE: 2.  EXAMINE the  4  sequences immediately below
     #   this comment, and READ the instructions that follows them.
     #
     # When you have examined the 4 sequences below and understand how
@@ -47,13 +47,13 @@ def main():
     #     4. When satisfied with your work, move onto the next test.
     # ------------------------------------------------------------------
 
-    run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_items_in_second_half(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
-#     run_test_print_items_that_are_strings(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_items_that_are_odd_integers(sequence1, sequence2, sequence3, sequence4)
+    # run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4)
+    # run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
+    # run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
+    # run_test_print_items_in_second_half(sequence1, sequence2, sequence3, sequence4)
+    # run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
+    # run_test_print_items_that_are_strings(sequence1, sequence2, sequence3, sequence4)
+    # run_test_print_items_that_are_odd_integers(sequence1, sequence2, sequence3, sequence4)
 
 
 def run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4):
@@ -354,13 +354,16 @@ def print_all_items_forwards(sequence):
        Point at (90, 25)
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
+    for k in range(len(sequence)):
+        print(sequence[k])
+
 
 # ----------------------------------------------------------------------
-# Iterating through the ENTIRE sequence, BACKWARDs.
+# Iterating through the ENTIRE sequence, BACKWARDS.
 # ----------------------------------------------------------------------
 def print_all_items_backwards(sequence):
     """
@@ -376,15 +379,19 @@ def print_all_items_backwards(sequence):
        55
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
+    for k in range(len(sequence) - 1, -1, -1):
+        print(sequence[k])
 
 # ----------------------------------------------------------------------
 # Iterating through PART of a sequence:
 #   -- in this sample problem, every other item in the sequence.
 # ----------------------------------------------------------------------
+
+
 def print_items_at_odd_indices(sequence):
     """
     Prints the items at the odd-numbered indices in the given sequence,
@@ -398,9 +405,13 @@ def print_items_at_odd_indices(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+
+    for k in range(len(sequence)):
+        if k % 2 == 1:
+            print(sequence[k], 'is at index', k)
 
 
 # ----------------------------------------------------------------------
@@ -420,7 +431,7 @@ def print_items_in_second_half(sequence):
       100
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # IMPORTANT: Don't get hung up on dealing with the middle item
@@ -431,11 +442,18 @@ def print_items_in_second_half(sequence):
     #   Use   //   for integer division.
     # ------------------------------------------------------------------
 
+    # for k in range(len(sequence)-1 , len(sequence)-1 // 2, -1):
+    #     print(sequence[k])
+
+    for k in range((len(sequence)) // 2, len(sequence), 1):
+        print(sequence[k])
 
 # ----------------------------------------------------------------------
 # Iterating through a sequence, selecting items:
 #   -- in this sample problem, the items that are bigger than 5.
 # ----------------------------------------------------------------------
+
+
 def print_items_that_are_bigger_than_5(sequence):
     """
     Prints the items in the given sequence that are bigger than 5,
@@ -452,9 +470,13 @@ def print_items_that_are_bigger_than_5(sequence):
     Precondition: All the items in the sequence are integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+
+    for k in range(len(sequence)):
+        if sequence[k] > 5:
+            print(sequence[k], 'is at index', k)
 
 
 # ----------------------------------------------------------------------
@@ -474,7 +496,7 @@ def print_items_that_are_strings(sequence):
       bone is at index 4
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     # IMPORTANT:
     #   -- A string is, by definition, an object whose type is   str.
@@ -486,6 +508,10 @@ def print_items_that_are_strings(sequence):
     #
     #        Note that   str   has NO quotes surrounding it.
     # ------------------------------------------------------------------
+
+    for k in range(len(sequence)):
+        if type(sequence[k]) is str:
+            print(sequence[k], 'is at index', k)
 
 
 # ----------------------------------------------------------------------
@@ -505,11 +531,17 @@ def print_items_that_are_odd_integers(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #
     # IMPORTANT:  The  type  function returns  int  if its argument
     #   is an integer.  Note that   int   has NO quotes surrounding it.
     # ------------------------------------------------------------------
+
+    for k in range(len(sequence)):
+        if type(sequence[k]) is int:
+            if sequence[k] % 2 == 1:
+                print(sequence[k], 'is at index', k)
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
