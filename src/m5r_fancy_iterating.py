@@ -12,11 +12,11 @@ is different from:
   -- LOOKING only at items AT even-numbered indices.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ryan Taylor.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 # ----------------------------------------------------------------------
-# TODO: 2. READ the program below and RUN it.
+# Done: 2. READ the program below and RUN it.
 #
 #   When you have read it, asking questions as needed,
 #   and you feel that you understand:
@@ -85,11 +85,11 @@ def sum_string_lengths(sequence, m, n):
     return total
 
     # Here is an alternative (there are other alternatives as well):
-    total = 0
-    for k in range(m, n + 1):
-        total = total + len(sequence[m + n - k])
-
-    return total
+    # total = 0
+    # for k in range(m, n + 1):
+    #     total = total + len(sequence[m + n - k])
+    #
+    # return total
 
 
 def sum_even_integers(sequence):
@@ -133,12 +133,12 @@ def sum_even_integers(sequence):
     return total
 
     # Here is an alternative (there are other alternatives as well):
-    total = 0
-    for k in range(len(sequence)):
-        if (type(sequence[k]) is int) and (sequence[k] % 2 == 0):
-            total = total + sequence[k]
-
-    return total
+    # total = 0
+    # for k in range(len(sequence)):
+    #     if (type(sequence[k]) is int) and (sequence[k] % 2 == 0):
+    #         total = total + sequence[k]
+    #
+    # return total
 
 
 def sum_items_at_even_indices(sequence):
@@ -173,12 +173,12 @@ def sum_items_at_even_indices(sequence):
 
     # Here is a ** BAD alternative ** that computes the right result
     # but takes twice as long to do so as needed.
-    total = 0
-    for k in range(len(sequence)):  # This is a BAD solution
-        if k % 2 == 0:
-            total = total + sequence[k]
-
-    return total
+    # total = 0
+    # for k in range(len(sequence)):  # This is a BAD solution
+    #     if k % 2 == 0:
+    #         total = total + sequence[k]
+    #
+    # return total
 
 
 # ----------------------------------------------------------------------
